@@ -195,7 +195,8 @@
               If you are ready to start, fill the form bellow and click the button to contact us, we will answer you as fust as we possible can!
             </p>
             <div class="container">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <form action="{{ route('email') }}}" method="post" role="form">
+                  @csrf
                 <div class="form-row">
                   <div class="col-md-6 form-group">
                     <input type="text" name="Order_name" class="form-control" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -210,7 +211,7 @@
                   <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                   <div class="validate"></div>
                 </div>
-                <div class="text-center"><button id="Email_button" class="submit_button" type="submit">Send an email</button></div>
+                <div class="text-center"><input type="submit" class="submit_button" name="Submit" value="Send an order"></div>
               </form>
             </div>
           </div>
@@ -404,7 +405,8 @@
               <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86102.84510883004!2d34.28820050576426!3d47.59280645409224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dca37006ef4ec7%3A0x363bcf91d5d469c4!2z0J3QuNC60L7Qv9C-0LvRjCwg0JTQvdC10L_RgNC-0L_QtdGC0YDQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0Yw!5e0!3m2!1sru!2sua!4v1587657949043!5m2!1sru!2sua" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
             </div>
             <div class="col-lg-6">
-              <form action="" method="post" role="form" class="php-email-form">
+              <form action="{{ route('email') }}" method="post" role="form">
+                  @csrf
                 <div class="form-row">
                   <div class="col-md-6 form-group">
                     <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -423,12 +425,7 @@
                   <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                   <div class="validate"></div>
                 </div>
-                <div class="mb-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div>
-                <div class="text-center"><button class="submit_button" type="submit">Send Message</button></div>
+                <div class="text-center"><input class="submit_button" type="submit" name="Submit" value="Rate us"></div>
               </form>
             </div>
           </div>

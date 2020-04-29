@@ -1063,7 +1063,7 @@ section {
   font-size: 14px;
 }
 
-.contact .php-email-form input::focus, .contact .php-email-form textarea::focus {
+.contact .php-email-form input:focus, .contact .php-email-form textarea::focus {
   background-color: #67b0d1;
 }
 

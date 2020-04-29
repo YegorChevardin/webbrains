@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('main');
 });
 
-Route::post('/email', 'FormController@index')->name('email');
+Route::match(['get', 'post'] ,'/email', 'FormController@index')->name('email');

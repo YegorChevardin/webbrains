@@ -30,7 +30,7 @@
     <header id="header" class="fixed-top">
       <div class="container d-flex">
         <div class="logo mr-auto">
-          <h1 class="text-light"><a href="/"><span>WebBrains - [bracket it]</span></a></h1>
+          <h1 class="text-light"><a href="/"><span>WebBrains</span></a></h1>
         </div>
         <!-- .nav-menu section start -->
         <nav class="nav-menu d-none d-lg-block">
@@ -51,11 +51,12 @@
     <section id="hero">
       <div class="hero-container" data-aos="fade-up">
         <h1>WebBrains</h1>
-        <h2>
+        <h2>[bracket it]</h2>
+        <h3>
           We are team of talanted web programmers,<br>
           that can make your web site<br>
           in small amount of time!
-        </h2>
+        </h3>
         <a href="#about" class="btn-get-started scrollto bg-dark"><i class="bx bx-chevrons-down"></i></a>
       </div>
     </section>
@@ -195,24 +196,24 @@
               If you are ready to start, fill the form bellow and click the button to contact us, we will answer you as fust as we possible can!
             </p>
             <div class="container">
-              <form action="{{ route('email') }}}" method="post" role="form">
-                  @csrf
-                <div class="form-row">
-                  <div class="col-md-6 form-group">
-                    <input type="text" name="Order_name" class="form-control" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                    <div class="validate"></div>
-                  </div>
-                  <div class="col-md-6 form-group">
-                    <input type="email" class="form-control" name="Order_email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                    <div class="validate"></div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                  <div class="validate"></div>
-                </div>
-                <div class="text-center"><input type="submit" class="submit_button" name="Submit" value="Send an order"></div>
-              </form>
+                <form action="{{ route('email') }}" method="post" role="form" class="php-email-form">
+                    @csrf
+                    <div class="form-row">
+                        <div class="col-md-6 form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required/>
+                            <div class="validate"></div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" required/>
+                            <div class="validate"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message" required></textarea>
+                        <div class="validate"></div>
+                    </div>
+                    <div class="text-center"><input id="Email_button" class="submit_button" type="submit" name="Submit" value="Make an order"></div>
+                </form>
             </div>
           </div>
         </div>
@@ -405,26 +406,27 @@
               <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86102.84510883004!2d34.28820050576426!3d47.59280645409224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dca37006ef4ec7%3A0x363bcf91d5d469c4!2z0J3QuNC60L7Qv9C-0LvRjCwg0JTQvdC10L_RgNC-0L_QtdGC0YDQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0Yw!5e0!3m2!1sru!2sua!4v1587657949043!5m2!1sru!2sua" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
             </div>
             <div class="col-lg-6">
-              <form action="{{ route('email') }}" method="post" role="form">
+              <form action="{{ route('email') }}" method="post" role="form" class="php-email-form">
                   @csrf
                 <div class="form-row">
                   <div class="col-md-6 form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required/>
                     <div class="validate"></div>
                   </div>
                   <div class="col-md-6 form-group">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" required/>
                     <div class="validate"></div>
                   </div>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required/>
                   <div class="validate"></div>
                 </div>
                 <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message" required></textarea>
                   <div class="validate"></div>
                 </div>
+                <div class="loading">Loading</div>
                 <div class="text-center"><input class="submit_button" type="submit" name="Submit" value="Rate us"></div>
               </form>
             </div>

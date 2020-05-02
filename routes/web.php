@@ -18,3 +18,7 @@ Route::get('/', function () {
 });
 
 Route::match(['get', 'post'] ,'/email', 'FormController@index')->name('email');
+
+Route::get('/testemail', function() {
+    return new \App\Mail\MakeOrder();
+})->name('testemail');

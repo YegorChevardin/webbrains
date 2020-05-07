@@ -12,7 +12,6 @@ class FormController extends Controller
         if(\View::exists('main')) {
             if(isset($request)) {
                 if($request->input("Submit") == "Make an order") {
-                    dd($request);
                     $data = [
                         'name' => $request->input('name'),
                         'email' => $request->input('email'),
@@ -20,7 +19,9 @@ class FormController extends Controller
                         'number' => $request->input('number')
                     ];
 
-                    Mail::to("webbrainscompany@gmail.com")->send(new MakeOrder($data));
+                    Mail::to('webbrainscompany@gmail.com')->send(new MakeOrder($data));
+
+                    return back();
                 } elseif ($request->input("Submit") == "Rate us") {
                     echo "Hello world!";
                 }

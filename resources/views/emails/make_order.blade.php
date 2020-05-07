@@ -1,12 +1,12 @@
 @component('mail::message')
-# Thank you for choosing WebBrains!
+# You have new order from {{ $email }}
 
-We'll anser you as fust as we possibly can!
+Telephone number: {{ $number }}
 
-@component('mail::button', ['url' => '/'])
-Back to our website
-@endcomponent
+Person's name: {{ $name }}
 
-We'll an,<br>
+Message: {{ $text }}
+
+Have a nice day,<br>
 {{ config('app.name') }}
 @endcomponent

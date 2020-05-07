@@ -213,7 +213,7 @@
                         <div class="validate"></div>
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message" required></textarea>
+                        <textarea class="form-control" name="text" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message" required></textarea>
                         <div class="validate"></div>
                     </div>
                     <div class="text-center"><input id="Email_button" class="submit_button" type="submit" name="Submit" value="Make an order"></div>

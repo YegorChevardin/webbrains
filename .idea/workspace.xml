@@ -4,10 +4,9 @@
     <list default="true" id="acaede8f-151d-4061-9d34-a1b66fe336c3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FormController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FormController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Mail/OrderMail.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Mail/MakeOrder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mail/MakeOrder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/emails/make_order.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/emails/make_order.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +177,8 @@
       <workItem from="1588190410643" duration="17000" />
       <workItem from="1588190764413" duration="328000" />
       <workItem from="1588368714502" duration="43000" />
-      <workItem from="1588444976402" duration="7013000" />
+      <workItem from="1588444976402" duration="7077000" />
+      <workItem from="1588885192067" duration="3736000" />
     </task>
     <servers />
   </component>

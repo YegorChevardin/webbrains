@@ -30,6 +30,11 @@ class MakeOrder extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.make_order');
+        return $this->from("{$this->data['email']}")->markdown('emails.make_order')->with([
+            'name' => $this->data['name'],
+            'email' => $this->data['email'],
+            'number' => $this->data['number'],
+            'text' => $this->data['text']
+        ]);
     }
 }

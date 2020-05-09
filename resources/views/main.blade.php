@@ -427,7 +427,7 @@
                   <div class="validate"></div>
                 </div>
                 <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message" required></textarea>
+                  <textarea class="form-control" name="text" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message" required></textarea>
                   <div class="validate"></div>
                 </div>
                 <div class="loading">Loading</div>

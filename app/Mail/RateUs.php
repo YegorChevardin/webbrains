@@ -11,14 +11,16 @@ class RateUs extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $data;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($data)
     {
-        //
+        $this->data = $data;
     }
 
     /**
@@ -28,6 +30,11 @@ class RateUs extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.rate_us');
+        return $this->from("{$this->data['email']}")->markdown('emails.rate_us')->with([
+            'name' => $this->data['name'],
+            'email' => $this->data['email'],
+            'text' => $this->data['text'],
+            'subject' => $this->data['subject']
+        ]);
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\MakeOrder;
+use App\Mail\RateUs;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -23,7 +24,16 @@ class FormController extends Controller
 
                     return back();
                 } elseif ($request->input("Submit") == "Rate us") {
-                    echo "Hello world!";
+                    $data = [
+                        'name' => $request->input('name'),
+                        'email' => $request->input('email'),
+                        'text' => $request->input('text'),
+                        'subject' => $request->input('subject')
+                    ];
+
+                    Mail::to('webbrainscompany@gmail.com')->send(new RateUs($data));
+
+                    return back();
                 }
             }
         }
